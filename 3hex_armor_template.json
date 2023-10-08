@@ -1,0 +1,1593 @@
+{
+  "name": "armor_template",
+  "type": "_equippableItemTemplate",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "checkboxes_panel",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "contents": [
+            {
+              "key": "isInEditMode",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Edit",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "isEquipped",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Equipped",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "item_count",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Count",
+                  "defaultValue": "1",
+                  "size": "m-small",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": true,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "isWare",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Mark For Sell",
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "type": "checkbox",
+                  "defaultChecked": false
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "horizontal",
+          "align": "justify",
+          "type": "panel"
+        },
+        {
+          "key": "armor_body_panel",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "pDEF Bonus",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "pDEF_bonus",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "mDEF Bonus",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "mDEF_bonus",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Bulk",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "armor_bulk",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Type",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "armor_type",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "Light Armor",
+                        "size": "full-size",
+                        "options": [
+                          {
+                            "key": "Robes",
+                            "value": "Robes"
+                          },
+                          {
+                            "key": "Light Armor",
+                            "value": "Light Armor"
+                          },
+                          {
+                            "key": "Medium Armor",
+                            "value": "Medium Armor"
+                          },
+                          {
+                            "key": "Heavy Armor",
+                            "value": "Heavy Armor"
+                          },
+                          {
+                            "key": "Other",
+                            "value": "Other"
+                          }
+                        ],
+                        "tableKey": null,
+                        "tableKeyColumn": null,
+                        "tableLabelColumn": null,
+                        "formulaKeyOptions": null,
+                        "formulaLabelOptions": null,
+                        "type": "select"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Unum Cost",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "unum_cost",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "0",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ]
+                  ],
+                  "cols": "2",
+                  "rows": "5",
+                  "layout": "rl",
+                  "type": "table"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "armor_description_panel_edit",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<h3>Description</h3>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "description_textarea",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p>This is where the description goes.</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "grid-2",
+          "align": "center",
+          "type": "panel"
+        },
+        {
+          "key": "armor_body_panel_static",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode==false",
+          "contents": [
+            {
+              "key": "armor_details_panel",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<h3>Armor Details</h3>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "<strong>pDEF</strong>",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "+${pDEF_bonus}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "<strong>mDEF</strong>",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "+${mDEF_bonus}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "<strong>Bulk</strong>",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "${armor_bulk}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "<strong>Type</strong>",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "${armor_type}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "<strong>Unum Cost</strong>",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "${unum_cost}$ Unum",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ]
+                  ],
+                  "cols": "2",
+                  "rows": "5",
+                  "layout": "rl",
+                  "type": "table"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "weapon_description_panel",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<h3>Description</h3>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "${description_textarea}$",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "grid-2",
+          "align": "center",
+          "type": "panel"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "display": {
+      "width": "600",
+      "height": "600",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "templateSystemUniqueVersion": 2012647719,
+    "modifiers": [
+      {
+        "id": "34MsUJyHChvrHH5c",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "pDEF_armor_bonus",
+        "operator": "set",
+        "formula": "${pDEF_bonus*(isEquipped ? 1 : 0)}$",
+        "description": ""
+      },
+      {
+        "id": "TvZyL4wXl1uV0ASG",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "mDEF_armor_bonus",
+        "operator": "set",
+        "formula": "${mDEF_bonus*(isEquipped ? 1 : 0)}$",
+        "description": ""
+      },
+      {
+        "id": "b1H356Ei5Twmuyh5",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "armors_equipped",
+        "operator": "add",
+        "formula": "${isEquipped ? 1 : 0}$",
+        "description": ""
+      },
+      {
+        "id": "egolzqYXUiZa0Pel",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "armor_bulk",
+        "operator": "add",
+        "formula": "${isEquipped ? armor_bulk : 0}$",
+        "description": ""
+      },
+      {
+        "id": "gkq6Bkk8NI6sIdXJ",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "unum_worth",
+        "operator": "add",
+        "formula": "${unum_cost*item_count}$",
+        "description": ""
+      },
+      {
+        "id": "Jv8NXIYQTqf5mESh",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "ware_worth",
+        "operator": "add",
+        "formula": "${isWare ?unum_cost*item_count : 0}$",
+        "description": ""
+      },
+      {
+        "id": "CabeW9Pl7Q98Tyqw",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "armor_worth",
+        "operator": "add",
+        "formula": "${unum_cost*item_count}$",
+        "description": ""
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "VbbkHEWvFMA5T5Wf",
+  "flags": {
+    "custom-system-builder": {
+      "version": "2.3.1",
+      "templateHistory": [
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "rows"
+            ],
+            "lhs": "4",
+            "rhs": "5"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 4,
+            "item": {
+              "kind": "N",
+              "rhs": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "Unum Cost",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [
+                  {
+                    "key": "unum_cost",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "0",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  }
+                ],
+                "flow": "vertical",
+                "align": "center",
+                "type": "panel"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              1,
+              "rows"
+            ],
+            "lhs": "4",
+            "rhs": "5"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents"
+            ],
+            "index": 4,
+            "item": {
+              "kind": "N",
+              "rhs": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<strong>Unum Cost</strong>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              4
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "${unum_cost}$ Unum",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "item_count",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "Count",
+                "defaultValue": "1",
+                "size": "m-small",
+                "allowDecimal": false,
+                "minVal": "0",
+                "maxVal": "",
+                "allowRelative": false,
+                "showControls": true,
+                "controlsStyle": "hover",
+                "type": "numberField"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "item_count",
+            "rhs": "isWare"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Count",
+            "rhs": "Mark For Sell"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": "1",
+            "rhs": null
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "m-small",
+            "rhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "allowDecimal"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "minVal"
+            ],
+            "lhs": "0"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "maxVal"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "allowRelative"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "showControls"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "controlsStyle"
+            ],
+            "lhs": "hover"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "numberField",
+            "rhs": "checkbox"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "defaultChecked"
+            ],
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 3,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "isWare",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "Mark For Sell",
+                "defaultValue": null,
+                "size": "full-size",
+                "type": "checkbox",
+                "defaultChecked": false
+              }
+            }
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "item_count",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "Count",
+                "defaultValue": "1",
+                "size": "m-small",
+                "allowDecimal": false,
+                "minVal": "0",
+                "maxVal": "",
+                "allowRelative": false,
+                "showControls": true,
+                "controlsStyle": "hover",
+                "type": "numberField"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "isWare",
+            "rhs": "item_count"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Mark For Sell",
+            "rhs": "Count"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": null,
+            "rhs": "1"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "full-size",
+            "rhs": "m-small"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "checkbox",
+            "rhs": "numberField"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "defaultChecked"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "allowDecimal"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "minVal"
+            ],
+            "rhs": "0"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "maxVal"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "allowRelative"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "showControls"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents",
+              0,
+              "controlsStyle"
+            ],
+            "rhs": "hover"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 3,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "isWare",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "Mark For Sell",
+                "defaultValue": null,
+                "size": "full-size",
+                "type": "checkbox",
+                "defaultChecked": false
+              }
+            }
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "isWare",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "Mark For Sell",
+                "defaultValue": null,
+                "size": "full-size",
+                "type": "checkbox",
+                "defaultChecked": false
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "flow"
+            ],
+            "lhs": "vertical",
+            "rhs": "horizontal"
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    },
+    "exportSource": {
+      "world": "3hex-beta",
+      "system": "custom-system-builder",
+      "coreVersion": "11.308",
+      "systemVersion": "3.0.0"
+    }
+  },
+  "_stats": {
+    "systemId": "custom-system-builder",
+    "systemVersion": "3.0.0",
+    "coreVersion": "11.308",
+    "createdTime": 1691010296475,
+    "modifiedTime": 1696743268805,
+    "lastModifiedBy": "XEpB2XYeoIxPqbtl"
+  }
+}

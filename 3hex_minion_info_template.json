@@ -1,0 +1,1566 @@
+{
+  "folder": "VbbkHEWvFMA5T5Wf",
+  "name": "minion_info_template",
+  "type": "_equippableItemTemplate",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "hidden": [
+      {
+        "name": "current_status",
+        "value": "${isInjured ? \"<span style='color:red;'>Injured</span> - ${days_injured}$ days.\" : \"Ready for Deployment\"}$"
+      },
+      {
+        "name": "minion_status_brief",
+        "value": "${isDeployed ? \"Deployed\" : (isInjured ? \"Injured (${days_injured}$)\" : (isTraveling ? \"Ready\" : \"Not Available\"))}$"
+      },
+      {
+        "name": "isAvailable",
+        "value": "${isInjured ? 0 : (isTraveling ? 1 : 0)}$"
+      },
+      {
+        "name": "current_daily_wages",
+        "value": "${isTraveling ? (isInjured ? daily_wages*2*item_count : daily_wages*item_count) : 0}$"
+      }
+    ],
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "checkboxes_panel",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                [
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Edit",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "isInEditMode",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "type": "checkbox",
+                    "defaultChecked": false
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Adjutant?",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "isAdjutant",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "type": "checkbox",
+                    "defaultChecked": false
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Available",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "isTraveling",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "type": "checkbox",
+                    "defaultChecked": true
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Deployed",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "isDeployed",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "type": "checkbox",
+                    "defaultChecked": false
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Count",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "item_count",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "1",
+                    "size": "m-small",
+                    "allowDecimal": false,
+                    "minVal": "0",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  }
+                ]
+              ],
+              "cols": "10",
+              "rows": "1",
+              "layout": "rlrlrlrlrc",
+              "type": "table"
+            }
+          ],
+          "flow": "vertical",
+          "align": "justify",
+          "type": "panel"
+        },
+        {
+          "key": "minion_info_edit",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Authority Cost",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "aut_cost",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "3",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "2",
+                                "maxVal": "35",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Level",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "minion_level",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "1",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "1",
+                                "maxVal": "300",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Battles Deployed",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "times_deployed",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "0",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "0",
+                                "maxVal": "",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Loyalty",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "minion_loyalty",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "0",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "0",
+                                "maxVal": "",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Minion Type",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "minion_type",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "Standard",
+                                "size": "full-size",
+                                "charList": "",
+                                "maxLength": "",
+                                "type": "textField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Battle Wages (Unum)",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "battle_wages",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "0",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "0",
+                                "maxVal": "",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Daily Wages (Unum)",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "daily_wages",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "0",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "0",
+                                "maxVal": "",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Death Penalty",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "contents": [
+                              {
+                                "key": "death_penalty",
+                                "cssClass": "",
+                                "role": "0",
+                                "permission": "0",
+                                "tooltip": "",
+                                "visibilityFormula": "",
+                                "label": "",
+                                "defaultValue": "0",
+                                "size": "full-size",
+                                "allowDecimal": false,
+                                "minVal": "0",
+                                "maxVal": "",
+                                "allowRelative": false,
+                                "showControls": true,
+                                "controlsStyle": "hover",
+                                "type": "numberField"
+                              }
+                            ],
+                            "flow": "vertical",
+                            "align": "center",
+                            "type": "panel"
+                          }
+                        ]
+                      ],
+                      "cols": "2",
+                      "rows": "8",
+                      "layout": "rl",
+                      "type": "table"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "is Injured",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "isInjured",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "type": "checkbox",
+                            "defaultChecked": false
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Days Injured",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "days_injured",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "m-small",
+                            "allowDecimal": false,
+                            "minVal": "0",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ]
+                      ],
+                      "cols": "2",
+                      "rows": "2",
+                      "layout": "rc",
+                      "type": "table"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "center",
+                  "type": "panel"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "minion_description",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "",
+                      "defaultValue": "<p>&lt;minion description goes here&gt;</p>",
+                      "size": null,
+                      "style": "sheet",
+                      "type": "textArea"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "center",
+                  "type": "panel"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "vertical",
+          "align": "center",
+          "type": "panel"
+        },
+        {
+          "key": "minion_info_static",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode==false",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Status</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${minion_status_brief}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ]
+                      ],
+                      "cols": "2",
+                      "rows": "1",
+                      "layout": "rl",
+                      "type": "table"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Authority Cost",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "aut_cost_display",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${isAdjutant ? ceil(aut_cost/2) : aut_cost}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Level",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${minion_level}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Battles Deployed",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${times_deployed}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Loyalty",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${minion_loyalty}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Minion Type",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${minion_type}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Battle Wages (Unum)",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${battle_wages}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Daily Wages (Unum)",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${current_daily_wages}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "Death Penalty",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${death_penalty}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ]
+                      ],
+                      "cols": "2",
+                      "rows": "8",
+                      "layout": "rl",
+                      "type": "table"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "center",
+                  "type": "panel"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": null,
+                      "defaultValue": null,
+                      "size": "full-size",
+                      "icon": "",
+                      "value": "<h2>${name}$</h2>",
+                      "prefix": "",
+                      "suffix": "",
+                      "rollMessage": "",
+                      "altRollMessage": "",
+                      "style": "label",
+                      "type": "label"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": null,
+                      "defaultValue": null,
+                      "size": "full-size",
+                      "icon": "",
+                      "value": "${minion_description}$",
+                      "prefix": "",
+                      "suffix": "",
+                      "rollMessage": "",
+                      "altRollMessage": "",
+                      "style": "label",
+                      "type": "label"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "center",
+                  "type": "panel"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "vertical",
+          "align": "center",
+          "type": "panel"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "display": {
+      "width": "600",
+      "height": "600",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "templateSystemUniqueVersion": 3748429298,
+    "modifiers": [
+      {
+        "id": "mdZorrmUlFJrv4ZI",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "daily_wages",
+        "operator": "add",
+        "formula": "${current_daily_wages}$",
+        "description": ""
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "custom-system-builder": {
+      "version": "3.0.0",
+      "templateHistory": [
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              5,
+              "defaultChecked"
+            ],
+            "lhs": false,
+            "rhs": true
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              4,
+              "value"
+            ],
+            "lhs": "Traveling?",
+            "rhs": "Available"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              1,
+              "value"
+            ],
+            "lhs": "${current_status}$",
+            "rhs": "${minion_status_brief}$"
+          }
+        ],
+        null,
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "${isAvailable}$",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "${isAvailable}$",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              6,
+              1,
+              "value"
+            ],
+            "lhs": "${isTraveling ? daily_wages : 0}$",
+            "rhs": "${isAvailable ? daily_wages : 0}$"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              6,
+              1,
+              "value"
+            ],
+            "lhs": "${isAvailable ? daily_wages : 0}$",
+            "rhs": "${isAvailable == 1 ? daily_wages : 0}$"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              6,
+              1,
+              "value"
+            ],
+            "lhs": "${isAvailable == 1 ? daily_wages : 0}$",
+            "rhs": "${isTraveling ? daily_wages : 0}$"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              6,
+              1,
+              "value"
+            ],
+            "lhs": "${isTraveling ? daily_wages : 0}$",
+            "rhs": "${current_daily_wages}$"
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    },
+    "exportSource": {
+      "world": "3hex-beta",
+      "system": "custom-system-builder",
+      "coreVersion": "11.308",
+      "systemVersion": "3.0.0"
+    }
+  },
+  "_stats": {
+    "systemId": "custom-system-builder",
+    "systemVersion": "3.0.0",
+    "coreVersion": "11.308",
+    "createdTime": 1696744880659,
+    "modifiedTime": 1696750660952,
+    "lastModifiedBy": "XEpB2XYeoIxPqbtl"
+  }
+}

@@ -1,0 +1,2741 @@
+{
+  "folder": "VbbkHEWvFMA5T5Wf",
+  "name": "ability_template",
+  "type": "_equippableItemTemplate",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "hidden": [
+      {
+        "name": "mht_req_display",
+        "value": "${mht_req == 0 ? \"\" : \"MHT \" }$ ${mht_req == 0 ? \"\" : mht_req }$"
+      },
+      {
+        "name": "awa_req_display",
+        "value": "${awa_req == 0 ? \"\" : \"AWA \" }$ ${awa_req == 0 ? \"\" : awa_req }$"
+      },
+      {
+        "name": "agi_req_display",
+        "value": "${agi_req == 0 ? \"\" : \"AGI \" }$ ${agi_req == 0 ? \"\" : agi_req }$"
+      },
+      {
+        "name": "vit_req_display",
+        "value": "${vit_req == 0 ? \"\" : \"VIT \" }$ ${vit_req == 0 ? \"\" : vit_req }$"
+      },
+      {
+        "name": "end_req_display",
+        "value": "${end_req == 0 ? \"\" : \"END \" }$ ${end_req == 0 ? \"\" : end_req }$"
+      },
+      {
+        "name": "kno_req_display",
+        "value": "${kno_req == 0 ? \"\" : \"KNO \" }$ ${kno_req == 0 ? \"\" : kno_req }$"
+      },
+      {
+        "name": "mnd_req_display",
+        "value": "${mnd_req == 0 ? \"\" : \"MND \" }$ ${mnd_req == 0 ? \"\" : mnd_req }$"
+      },
+      {
+        "name": "pre_req_display",
+        "value": "${pre_req == 0 ? \"\" : \"PRE \" }$ ${pre_req == 0 ? \"\" : pre_req }$"
+      },
+      {
+        "name": "aut_req_display",
+        "value": "${aut_req == 0 ? \"\" : \"AUT \" }$ ${aut_req == 0 ? \"\" : aut_req }$"
+      },
+      {
+        "name": "skl_req_display",
+        "value": "${skl_req == 0 ? \"\" : \"SKL \" }$ ${skl_req == 0 ? \"\" : skl_req }$"
+      },
+      {
+        "name": "ability_cost_adjusted",
+        "value": "${isAdjutantOnly ? 0 : (isRoleplay ?0 : ability_cost*times_upscaled)}$"
+      },
+      {
+        "name": "ability_uses_display",
+        "value": "${ability_uses > 0 ? ability_uses+(times_upscaled-1)*upscale_extra_uses : \"\"}$ ${reset_condition}$"
+      },
+      {
+        "name": "isPrepared",
+        "value": "${true}$"
+      },
+      {
+        "name": "isAbility",
+        "value": "1"
+      },
+      {
+        "name": "ability_uses_display_sm",
+        "value": "${ability_uses > 0 ? ability_uses+(times_upscaled-1)*upscale_extra_uses : \"\"}$ ${switchCase(reset_condition, \"per Battle\", \"\", \"per Turn\", \" / T\", \"per Rest\", \" / Day\", \"per Recovery\", \"\", \"at Will\", \"∞\", \"\")}$"
+      },
+      {
+        "name": "lvl_req_display",
+        "value": "${lvl_req == 0 ? \"\" : \"LVL \" }$ ${lvl_req == 0 ? \"\" : lvl_req }$"
+      },
+      {
+        "name": "first_six_req",
+        "value": "${mht_req_display}$ ${awa_req_display}$ ${agi_req_display}$ ${vit_req_display}$ ${end_req_display}$ ${kno_req_display}$ "
+      },
+      {
+        "name": "last_four_req",
+        "value": "${mnd_req_display}$ ${pre_req_display}$ ${aut_req_display}$ ${skl_req_display}$"
+      },
+      {
+        "name": "rpas_cost_adjusted",
+        "value": "${isAdjutantOnly ? 0 : ( isRoleplay ? ability_cost*times_upscaled : 0)}$"
+      },
+      {
+        "name": "isAbilityX",
+        "value": "1"
+      }
+    ],
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "checkboxes_panel",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "contents": [
+            {
+              "key": "isInEditMode",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Edit",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "isAdjutantOnly",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "No Cost",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "canUpscale",
+              "contents": [
+                {
+                  "key": "times_upscaled",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Times Upscaled",
+                  "defaultValue": "1",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "1",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": true,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "isEquipped",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Equipped",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "isPreviewable",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Previewable",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": true
+            }
+          ],
+          "flow": "horizontal",
+          "align": "left",
+          "type": "panel"
+        },
+        {
+          "key": "ability_details_panel_edit",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": null,
+              "defaultValue": null,
+              "size": "full-size",
+              "icon": "",
+              "value": "<h3>Ability Requirements</h3>",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "",
+              "altRollMessage": "",
+              "style": "label",
+              "type": "label"
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                [
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "MHT",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "mht_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "AGI",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "agi_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "SKL",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "skl_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "AWA",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "awa_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "VIT",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "vit_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  }
+                ],
+                [
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "KNO",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "kno_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "MND",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "mnd_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "PRE",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "pre_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "AUT",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "aut_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "END",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "end_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  }
+                ],
+                [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              ],
+              "cols": "10",
+              "rows": "2",
+              "layout": "rcrcrcrcrc",
+              "type": "table"
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                [
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "LVL",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "contents": [
+                      {
+                        "key": "lvl_req",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "0",
+                        "size": "full-size",
+                        "allowDecimal": false,
+                        "minVal": "",
+                        "maxVal": "",
+                        "allowRelative": false,
+                        "showControls": true,
+                        "controlsStyle": "hover",
+                        "type": "numberField"
+                      }
+                    ],
+                    "flow": "vertical",
+                    "align": "center",
+                    "type": "panel"
+                  }
+                ],
+                [
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": null,
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Other",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "style": "label",
+                    "type": "label"
+                  },
+                  {
+                    "key": "other_req",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "",
+                    "size": "full-size",
+                    "charList": "",
+                    "maxLength": "",
+                    "type": "textField"
+                  }
+                ]
+              ],
+              "cols": "2",
+              "rows": "2",
+              "layout": "rlrl",
+              "type": "table"
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Class",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "ability_class",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "",
+                        "size": "full-size",
+                        "charList": "",
+                        "maxLength": "",
+                        "type": "textField"
+                      },
+                      null,
+                      null
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Uses",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "ability_uses",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "1",
+                        "size": "full-size",
+                        "allowDecimal": false,
+                        "minVal": "",
+                        "maxVal": "",
+                        "allowRelative": false,
+                        "showControls": true,
+                        "controlsStyle": "hover",
+                        "type": "numberField"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Ability Cost",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "ability_cost",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "1",
+                        "size": "full-size",
+                        "allowDecimal": false,
+                        "minVal": "0",
+                        "maxVal": "",
+                        "allowRelative": false,
+                        "showControls": true,
+                        "controlsStyle": "hover",
+                        "type": "numberField"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Reset Condition",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "reset_condition",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "per Battle",
+                        "size": "full-size",
+                        "options": [
+                          {
+                            "key": "per Turn",
+                            "value": "per Turn"
+                          },
+                          {
+                            "key": "per Battle",
+                            "value": "per Battle"
+                          },
+                          {
+                            "key": "per Rest",
+                            "value": "per Rest"
+                          },
+                          {
+                            "key": "per Day",
+                            "value": "per Day"
+                          },
+                          {
+                            "key": "per Recovery",
+                            "value": "per Recovery"
+                          },
+                          {
+                            "key": "at Will",
+                            "value": "at Will"
+                          },
+                          {
+                            "key": "Passive",
+                            "value": "Passive"
+                          }
+                        ],
+                        "tableKey": null,
+                        "tableKeyColumn": null,
+                        "tableLabelColumn": null,
+                        "formulaKeyOptions": null,
+                        "formulaLabelOptions": null,
+                        "type": "select"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Ability Category",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "ability_category",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "Damage",
+                        "size": "full-size",
+                        "options": [
+                          {
+                            "key": "Damage",
+                            "value": "Damage"
+                          },
+                          {
+                            "key": "Surrender",
+                            "value": "Surrender"
+                          },
+                          {
+                            "key": "Stat Boost",
+                            "value": "Stat Boost"
+                          },
+                          {
+                            "key": "Defensive",
+                            "value": "Defensive"
+                          },
+                          {
+                            "key": "Movement",
+                            "value": "Movement"
+                          },
+                          {
+                            "key": "Healing",
+                            "value": "Healing"
+                          },
+                          {
+                            "key": "Leadership",
+                            "value": "Leadership"
+                          },
+                          {
+                            "key": "Magic",
+                            "value": "Magic"
+                          },
+                          {
+                            "key": "Resistance",
+                            "value": "Resistance"
+                          },
+                          {
+                            "key": "Targeting",
+                            "value": "Targeting"
+                          },
+                          {
+                            "key": "Control",
+                            "value": "Control"
+                          },
+                          {
+                            "key": "Debuff",
+                            "value": "Debuff"
+                          },
+                          {
+                            "key": "Accuracy",
+                            "value": "Accuracy"
+                          },
+                          {
+                            "key": "Social",
+                            "value": "Social"
+                          },
+                          {
+                            "key": "Tools",
+                            "value": "Tools"
+                          },
+                          {
+                            "key": "Skill",
+                            "value": "Skill"
+                          },
+                          {
+                            "key": "Knowledge",
+                            "value": "Knowledge"
+                          }
+                        ],
+                        "tableKey": null,
+                        "tableKeyColumn": null,
+                        "tableLabelColumn": null,
+                        "formulaKeyOptions": null,
+                        "formulaLabelOptions": null,
+                        "type": "select"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Passive",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "isPassive",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "type": "checkbox",
+                        "defaultChecked": false
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Upscalable",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "canUpscale",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "type": "checkbox",
+                        "defaultChecked": false
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Reaction",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "isReaction",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "type": "checkbox",
+                        "defaultChecked": false
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Upscale +Uses",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "upscale_extra_uses",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "1",
+                        "size": "full-size",
+                        "allowDecimal": false,
+                        "minVal": "1",
+                        "maxVal": "",
+                        "allowRelative": false,
+                        "showControls": true,
+                        "controlsStyle": "hover",
+                        "type": "numberField"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Roleplay",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "isRoleplay",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "type": "checkbox",
+                        "defaultChecked": false
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Prestige",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "isPrestige",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "type": "checkbox",
+                        "defaultChecked": false
+                      }
+                    ]
+                  ],
+                  "cols": "4",
+                  "rows": "6",
+                  "layout": "rcrc",
+                  "type": "table"
+                },
+                {
+                  "key": "ability_description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p>&lt;ABILITY TEXT GOES HERE&gt;</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "vertical",
+          "align": "center",
+          "type": "panel"
+        },
+        {
+          "key": "ability_details_panel",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode == false",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Class</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${ability_class}$ ${isRoleplay ? \" - Roleplay\" : \"\"}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>${isPrestige ? \"Prestige\" : \"Ability\"}$ Cost</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<span style=\"${isPrestige ? \"display: none;\" : \"\"}$\">${isRoleplay ? rpas_cost_adjusted : ability_cost_adjusted}$${times_upscaled > 1 ? \"*\" : \"\"}$</span>\n<span style=\"${isPrestige ? \"\" : \"display: none;\"}$\">1</span>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Uses</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${ability_uses_display}$${times_upscaled > 1 ? \"*\" : \"\"}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Category</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${ability_category}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Requirements</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${lvl_req_display}$ ${first_six_req}$\n${last_four_req}$ ${other_req}$\n",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          null,
+                          null
+                        ]
+                      ],
+                      "cols": "2",
+                      "rows": "5",
+                      "layout": "rl",
+                      "type": "table"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "canUpscale",
+                      "contents": [
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Can Upscale</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "${canUpscale ? \"yes\" : \"no\"}$",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ],
+                        [
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "<strong>Upscale Extra Uses</strong>",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          },
+                          {
+                            "key": "",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": null,
+                            "defaultValue": null,
+                            "size": "full-size",
+                            "icon": "",
+                            "value": "+${upscale_extra_uses}$ each",
+                            "prefix": "",
+                            "suffix": "",
+                            "rollMessage": "",
+                            "altRollMessage": "",
+                            "style": "label",
+                            "type": "label"
+                          }
+                        ]
+                      ],
+                      "cols": "2",
+                      "rows": "2",
+                      "layout": "rl",
+                      "type": "table"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "center",
+                  "type": "panel"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": null,
+                      "defaultValue": null,
+                      "size": "full-size",
+                      "icon": "",
+                      "value": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>",
+                      "prefix": "",
+                      "suffix": "",
+                      "rollMessage": "",
+                      "altRollMessage": "",
+                      "style": "label",
+                      "type": "label"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        {
+                          "key": "",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "",
+                          "label": null,
+                          "defaultValue": null,
+                          "size": "full-size",
+                          "icon": "",
+                          "value": "${ability_description}$\n",
+                          "prefix": "",
+                          "suffix": "",
+                          "rollMessage": "",
+                          "altRollMessage": "",
+                          "style": "label",
+                          "type": "label"
+                        }
+                      ],
+                      "flow": "vertical",
+                      "align": "left",
+                      "type": "panel"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "center",
+                  "type": "panel"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "vertical",
+          "align": "center",
+          "type": "panel"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "display": {
+      "width": "600",
+      "height": "600",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "templateSystemUniqueVersion": 3849891837,
+    "modifiers": [
+      {
+        "id": "AfuZjGKH1ysDVd2Z",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "as_used",
+        "operator": "add",
+        "formula": "${isEquipped ? ability_cost_adjusted : 0}$",
+        "description": ""
+      },
+      {
+        "id": "d4xBdNvEylFsaAi8",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "prestige_used",
+        "operator": "add",
+        "formula": "${isPrestige ? times_upscaled : 0}$",
+        "description": ""
+      },
+      {
+        "id": "j0Ry9AZycAaG8LPK",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "rpas_used",
+        "operator": "add",
+        "formula": "${isEquipped ? rpas_cost_adjusted : 0}$",
+        "description": ""
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "custom-system-builder": {
+      "version": "2.3.1",
+      "templateHistory": [
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              1,
+              "value"
+            ],
+            "lhs": "<span style=\"${isPrestige ? \"display: none;\" : \"\"}$\">${ability_cost_adjusted}$${times_upscaled > 1 ? \"*\" : \"\"}$</span>\n<span style=\"${isPrestige ? \"\" : \"display: none;\"}$\">1</span>",
+            "rhs": "<span style=\"${isPrestige ? \"display: none;\" : \"\"}$\">${isRoleplay ? rpas_cost_adjusted : ability_cost_adjusted}$${times_upscaled > 1 ? \"*\" : \"\"}$</span>\n<span style=\"${isPrestige ? \"\" : \"display: none;\"}$\">1</span>"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              1,
+              "value"
+            ],
+            "lhs": "${ability_class}$",
+            "rhs": "${ability_class}$ ${isRoleplay ? \" - Roleplay\" : \"\"}$"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              3,
+              "contents",
+              0,
+              "contents",
+              2,
+              3,
+              "options"
+            ],
+            "index": 14,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "Tools",
+                "value": "Tools"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              3,
+              "contents",
+              0,
+              "contents",
+              2,
+              3,
+              "options"
+            ],
+            "index": 15,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "Skill",
+                "value": "Skill"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              3,
+              "contents",
+              0,
+              "contents",
+              2,
+              3,
+              "options"
+            ],
+            "index": 16,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "Knowledge",
+                "value": "Knowledge"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [],
+                "flow": "vertical",
+                "align": "left",
+                "type": "panel"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [],
+                "flow": "vertical",
+                "align": "left",
+                "type": "panel"
+              }
+            }
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": null
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": null
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "value"
+            ],
+            "lhs": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>\n${ability_description}$\n"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "style"
+            ],
+            "lhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "panel"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents"
+            ],
+            "rhs": [
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>\n${ability_description}$\n",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "flow"
+            ],
+            "rhs": "vertical"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "align"
+            ],
+            "rhs": "left"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "value"
+            ],
+            "lhs": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>\n${ability_description}$\n",
+            "rhs": "${ability_description}$\n"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "label"
+            ],
+            "lhs": null
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "defaultValue"
+            ],
+            "lhs": null
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "size"
+            ],
+            "lhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "panel"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents"
+            ],
+            "rhs": [
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "${ability_description}$\n",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "flow"
+            ],
+            "rhs": "vertical"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              1,
+              "align"
+            ],
+            "rhs": "left"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents"
+            ],
+            "lhs": [
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": null,
+                "defaultValue": null,
+                "size": "full-size",
+                "icon": "",
+                "value": "${ability_description}$\n",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "style": "label",
+                "type": "label"
+              }
+            ]
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "flow"
+            ],
+            "lhs": "vertical"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "align"
+            ],
+            "lhs": "left"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "panel",
+            "rhs": "label"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "label"
+            ],
+            "rhs": null
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "rhs": null
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "size"
+            ],
+            "rhs": "full-size"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "value"
+            ],
+            "rhs": "<h3>${name}$</h3>\n<strong>${isPrestige ? \"Prestige.\" : \"\"}$</strong>"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              1,
+              "contents",
+              1,
+              "contents",
+              0,
+              "style"
+            ],
+            "rhs": "label"
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    },
+    "exportSource": {
+      "world": "3hex-beta",
+      "system": "custom-system-builder",
+      "coreVersion": "11.308",
+      "systemVersion": "3.0.0"
+    }
+  },
+  "_stats": {
+    "systemId": "custom-system-builder",
+    "systemVersion": "3.0.0",
+    "coreVersion": "11.308",
+    "createdTime": 1693173807572,
+    "modifiedTime": 1696752440845,
+    "lastModifiedBy": "XEpB2XYeoIxPqbtl"
+  }
+}

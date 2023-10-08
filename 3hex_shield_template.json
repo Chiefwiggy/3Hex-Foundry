@@ -1,0 +1,1685 @@
+{
+  "name": "shield_template",
+  "type": "_equippableItemTemplate",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "checkboxes_panel",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "contents": [
+            {
+              "key": "isInEditMode",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Edit",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "isEquipped",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Equipped",
+              "defaultValue": null,
+              "size": "full-size",
+              "type": "checkbox",
+              "defaultChecked": false
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "item_count",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Count",
+                  "defaultValue": "1",
+                  "size": "m-small",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": true,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "isWare",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Mark For Sell",
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "type": "checkbox",
+                  "defaultChecked": false
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "horizontal",
+          "align": "center",
+          "type": "panel"
+        },
+        {
+          "key": "shield_body_panel_edit",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode",
+          "contents": [
+            {
+              "key": "shield_details_panel_edit",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "pDEF",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "pDEF_bonus",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "mDEF",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "mDEF_bonus",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Bulk",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "shield_bulk",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Parry",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "parry_bonus",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Type",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "shield_type",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": "",
+                        "defaultValue": "Medium Shield",
+                        "size": "full-size",
+                        "options": [
+                          {
+                            "key": "Buckler",
+                            "value": "Buckler"
+                          },
+                          {
+                            "key": "Light Shield",
+                            "value": "Light Shield"
+                          },
+                          {
+                            "key": "Medium Shield",
+                            "value": "Medium Shield"
+                          },
+                          {
+                            "key": "War Shield",
+                            "value": "War Shield"
+                          },
+                          {
+                            "key": "Tower Shield",
+                            "value": "Tower Shield"
+                          }
+                        ],
+                        "tableKey": null,
+                        "tableKeyColumn": null,
+                        "tableLabelColumn": null,
+                        "formulaKeyOptions": null,
+                        "formulaLabelOptions": null,
+                        "type": "select"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Unum Cost",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "contents": [
+                          {
+                            "key": "unum_cost",
+                            "cssClass": "",
+                            "role": "0",
+                            "permission": "0",
+                            "tooltip": "",
+                            "visibilityFormula": "",
+                            "label": "",
+                            "defaultValue": "0",
+                            "size": "full-size",
+                            "allowDecimal": false,
+                            "minVal": "0",
+                            "maxVal": "",
+                            "allowRelative": false,
+                            "showControls": true,
+                            "controlsStyle": "hover",
+                            "type": "numberField"
+                          }
+                        ],
+                        "flow": "vertical",
+                        "align": "center",
+                        "type": "panel"
+                      }
+                    ]
+                  ],
+                  "cols": "2",
+                  "rows": "6",
+                  "layout": "rl",
+                  "type": "table"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "shield_description_panel_edit",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<h3>Description</h3>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "description_textarea",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p>This is where the description goes.</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "grid-2",
+          "align": "center",
+          "type": "panel"
+        },
+        {
+          "key": "shield_body_panel_static",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "isInEditMode==false",
+          "contents": [
+            {
+              "key": "shield_details_panel",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<h3>Shield Details</h3>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "pDEF",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "+${pDEF_bonus}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "mDEF",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "+${mDEF_bonus}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Bulk",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "${shield_bulk}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Parry",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "+${floor(parry_bonus / 10)}$ : ${parry_bonus % 10}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Type",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "${shield_type}$",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ],
+                    [
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "Unum Cost",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      },
+                      {
+                        "key": "",
+                        "cssClass": "",
+                        "role": "0",
+                        "permission": "0",
+                        "tooltip": "",
+                        "visibilityFormula": "",
+                        "label": null,
+                        "defaultValue": null,
+                        "size": "full-size",
+                        "icon": "",
+                        "value": "${unum_cost}$ Unum",
+                        "prefix": "",
+                        "suffix": "",
+                        "rollMessage": "",
+                        "altRollMessage": "",
+                        "style": "label",
+                        "type": "label"
+                      }
+                    ]
+                  ],
+                  "cols": "2",
+                  "rows": "6",
+                  "layout": "rl",
+                  "type": "table"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "shield_description_panel",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "<h3>Description</h3>",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "${description_textarea}$",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "flow": "grid-2",
+          "align": "center",
+          "type": "panel"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "display": {
+      "width": "600",
+      "height": "600",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "templateSystemUniqueVersion": 505921722,
+    "modifiers": [
+      {
+        "id": "bZ7Sy4ARqfJG26fA",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "pDEF_shield_bonus",
+        "operator": "add",
+        "formula": "${pDEF_bonus*(isEquipped ? 1 : 0)}$",
+        "description": ""
+      },
+      {
+        "id": "MS6P6zVm8iKcj1N7",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "mDEF_shield_bonus",
+        "operator": "add",
+        "formula": "${mDEF_bonus*(isEquipped ? 1 : 0)}$",
+        "description": ""
+      },
+      {
+        "id": "UOYPkfd93VFPLJfv",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "shields_equipped",
+        "operator": "add",
+        "formula": "${isEquipped ? 1 : 0}$",
+        "description": ""
+      },
+      {
+        "id": "jghNNJptpt0FbLK2",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "shield_parryBonus",
+        "operator": "add",
+        "formula": "${isEquipped ? parry_bonus : 0}$",
+        "description": ""
+      },
+      {
+        "id": "qBlizDqHs0vEBz63",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "shield_bulk",
+        "operator": "add",
+        "formula": "${isEquipped ? shield_bulk : 0}$",
+        "description": ""
+      },
+      {
+        "id": "hWSgJA16DNCwr3iW",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "unum_worth",
+        "operator": "add",
+        "formula": "${unum_cost*item_count}$",
+        "description": ""
+      },
+      {
+        "id": "ViBaJ5rm5HU6Gj18",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "ware_worth",
+        "operator": "add",
+        "formula": "${isWare ?unum_cost*item_count : 0}$",
+        "description": ""
+      },
+      {
+        "id": "Hg1dHSJbKt3HHKGn",
+        "conditionalGroup": "",
+        "priority": 0,
+        "key": "shield_worth",
+        "operator": "add",
+        "formula": "${unum_cost*item_count}$",
+        "description": ""
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "VbbkHEWvFMA5T5Wf",
+  "flags": {
+    "custom-system-builder": {
+      "version": "2.3.1",
+      "templateHistory": [
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "key"
+            ],
+            "lhs": null,
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "cssClass"
+            ],
+            "lhs": null,
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "role"
+            ],
+            "lhs": 0,
+            "rhs": "0"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "permission"
+            ],
+            "lhs": 0,
+            "rhs": "0"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "tooltip"
+            ],
+            "lhs": null,
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "visibilityFormula"
+            ],
+            "lhs": null,
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "flow"
+            ],
+            "lhs": null,
+            "rhs": "vertical"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "align"
+            ],
+            "lhs": null,
+            "rhs": "center"
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              1,
+              "formulaKeyOptions"
+            ],
+            "rhs": null
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              1,
+              "formulaLabelOptions"
+            ],
+            "rhs": null
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              1,
+              "contents",
+              0,
+              "controlsStyle"
+            ],
+            "rhs": "hover"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              1,
+              "contents",
+              0,
+              "controlsStyle"
+            ],
+            "rhs": "hover"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              1,
+              "contents",
+              0,
+              "controlsStyle"
+            ],
+            "rhs": "hover"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              1,
+              "contents",
+              0,
+              "controlsStyle"
+            ],
+            "rhs": "hover"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "rows"
+            ],
+            "lhs": "5",
+            "rhs": "6"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultChecked"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultChecked"
+            ],
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 5,
+            "item": {
+              "kind": "N",
+              "rhs": [
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "Unum Cost",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [
+                  {
+                    "key": "unum_cost",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "",
+                    "defaultValue": "0",
+                    "size": "full-size",
+                    "allowDecimal": false,
+                    "minVal": "0",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  }
+                ],
+                "flow": "vertical",
+                "align": "center",
+                "type": "panel"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              1,
+              "rows"
+            ],
+            "lhs": "5",
+            "rhs": "6"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents"
+            ],
+            "index": 5,
+            "item": {
+              "kind": "N",
+              "rhs": [
+                null,
+                {
+                  "key": "",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "${unum_cost}$ Unum",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              5,
+              0
+            ],
+            "lhs": null,
+            "rhs": {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": null,
+              "defaultValue": null,
+              "size": "full-size",
+              "icon": "",
+              "value": "Unum Cost",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "",
+              "altRollMessage": "",
+              "style": "label",
+              "type": "label"
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [
+                  [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": null,
+                      "defaultValue": null,
+                      "size": "full-size",
+                      "icon": "",
+                      "value": "Count",
+                      "prefix": "",
+                      "suffix": "",
+                      "rollMessage": "",
+                      "altRollMessage": "",
+                      "style": "label",
+                      "type": "label"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        {
+                          "key": "item_count",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "",
+                          "label": "",
+                          "defaultValue": "1",
+                          "size": "m-small",
+                          "allowDecimal": false,
+                          "minVal": "0",
+                          "maxVal": "",
+                          "allowRelative": false,
+                          "showControls": true,
+                          "controlsStyle": "hover",
+                          "type": "numberField"
+                        }
+                      ],
+                      "flow": "vertical",
+                      "align": "center",
+                      "type": "panel"
+                    },
+                    null,
+                    null
+                  ]
+                ],
+                "cols": "2",
+                "rows": "1",
+                "layout": "rlrl",
+                "type": "table"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [
+                  [
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": null,
+                      "defaultValue": null,
+                      "size": "full-size",
+                      "icon": "",
+                      "value": "Count",
+                      "prefix": "",
+                      "suffix": "",
+                      "rollMessage": "",
+                      "altRollMessage": "",
+                      "style": "label",
+                      "type": "label"
+                    },
+                    {
+                      "key": "",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        {
+                          "key": "item_count",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "",
+                          "label": "",
+                          "defaultValue": "1",
+                          "size": "m-small",
+                          "allowDecimal": false,
+                          "minVal": "0",
+                          "maxVal": "",
+                          "allowRelative": false,
+                          "showControls": true,
+                          "controlsStyle": "hover",
+                          "type": "numberField"
+                        }
+                      ],
+                      "flow": "vertical",
+                      "align": "center",
+                      "type": "panel"
+                    },
+                    null,
+                    null
+                  ]
+                ],
+                "cols": "2",
+                "rows": "1",
+                "layout": "rlrl",
+                "type": "table"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "contents": [
+                  {
+                    "key": "item_count",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "Count",
+                    "defaultValue": "1",
+                    "size": "m-small",
+                    "allowDecimal": false,
+                    "minVal": "0",
+                    "maxVal": "",
+                    "allowRelative": false,
+                    "showControls": true,
+                    "controlsStyle": "hover",
+                    "type": "numberField"
+                  },
+                  {
+                    "key": "isWare",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "label": "Mark For Sell",
+                    "defaultValue": null,
+                    "size": "full-size",
+                    "type": "checkbox",
+                    "defaultChecked": false
+                  }
+                ],
+                "flow": "horizontal",
+                "align": "center",
+                "type": "panel"
+              }
+            }
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    },
+    "exportSource": {
+      "world": "3hex-beta",
+      "system": "custom-system-builder",
+      "coreVersion": "11.308",
+      "systemVersion": "3.0.0"
+    }
+  },
+  "_stats": {
+    "systemId": "custom-system-builder",
+    "systemVersion": "3.0.0",
+    "coreVersion": "11.308",
+    "createdTime": 1692556745155,
+    "modifiedTime": 1696743295925,
+    "lastModifiedBy": "XEpB2XYeoIxPqbtl"
+  }
+}
